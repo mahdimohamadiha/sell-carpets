@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../frontend/home.js"></script>
+    <script type="text/javascript" src="../frontend/seaech.js"></script>
+    <title>صنایع فرش</title>
+</head>
+
+<body onload="home()">
+    <header>
+        <div class="head_title">
+            <h1>صنایع فرش ایران</h1>
+        </div>
+        <nav class="menu_bar">
+            <ul>
+                <li><a href="#">خانه</a></li>
+                <li><a href="video.html">آموزش قالی بافی</a></li>
+                <li><a href="contact_us.html">ارتباط با ما</a></li>
+                <li><a href="login.html">ورود</a></li>
+                <li><a hidden id="fullname" href="edit&remove.html"></a></li>
+                <li><div class="search-container">
+                    <button onclick="search()" id="searchButton">جستجو</button>
+                    <input type="text" id="searchInput" placeholder="جستجو...">
+                  </div>
+                </li>
+            </ul>
+            <audio controls loop > 
+                <source src="../assets/audios/a1.mp3" type="audio/mp3">
+            </audio>
+        </nav>
+    </header>
+
+    <main>
+        
+        <div class="right-side">
+            <div class="column_1">
+                <div class="row_1">
+                    <h3 class="title_right_side">دسترسی های سریع</h3>
+                    <ul class="list_right_side">
+                        <li class="mt-10"><a href="/" class="text_right_side">ماهیت صنایع دستی رو بشناس</a></li>
+                        <li class="mt-10"><a href="/" class="text_right_side">روز جهانی فرش</a></li>
+                        <li class="mt-10"><a href="/" class="text_right_side">زیباترین تجلی هنر دست ایرانیان</a></li>
+                    </ul>  
+                </div>
+                <div id="objectList" class="row_2">
+                    <!-- <div id="objectList"></div> -->
+                    <!-- <div class="card">
+                        <img src="../assets/images/pic4.jpg" alt="Image 1">
+                        <div class="card-content">
+                            <h2>فرش شاه عباسی سرمه ای</h2>
+                            <p>فرش شاه‌ عباسی برای اولین بار در دوران شاه عباس صفوی در اصفهان بافته شد. به همین دلیل این طرح به نام شاه عباس ثبت شده است.</p>
+                            <a href="#" class="buy-button">خرید</a>
+                        </div>
+                    </div>
+                
+                    <div class="card">
+                        <img src="../assets/images/pic5.jpg" alt="Image 2">
+                        <div class="card-content">
+                            <h2>فرش بته ای</h2>
+                            <p>بته در طرح فرش استفاده می‌شود و همراه با خطوط اسلیمی برای ارتباط دادن بته‌ها به همدیگر به ویژه در بته جقه کاربرد دارد.</p>
+                        </div>
+                    </div>
+                
+                    <div class="card">
+                        <img src="../assets/images/pic6.jpg" alt="Image 3">
+                        <div class="card-content">
+                            <h2>گلیم فرش قابی</h2>
+                            <p>گلیم همانند فرش ماشینی معمولا دارای شانه و تراکم های متفاوتی است. فرش گلیم مدل قابی با تراکم شانه  320 و تراکم پودی  700 بافت میگردد.</p>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="column_2">
+                <h2>جدیدترین اخبار فرش ایران</h2>
+                <div class="news_carts">
+                    <a href="https://www.isna.ir/news/1402082014417/%D8%AF%D8%B1%D8%AE%D9%88%D8%A7%D8%B3%D8%AA-%D8%AA%D9%88%D9%84%DB%8C%D8%AF%DA%A9%D9%86%D9%86%D8%AF%DA%AF%D8%A7%D9%86-%D8%A8%D8%B1%D8%A7%DB%8C-%D8%A7%DB%8C%D8%AC%D8%A7%D8%AF-%D8%B3%D8%A7%D8%B2%D9%85%D8%A7%D9%86-%D9%81%D8%B1%D8%B4-%D8%B2%DB%8C%D8%B1-%D9%86%D8%B8%D8%B1-%D8%B1%D8%A6%DB%8C%D8%B3-%D8%AC%D9%85%D9%87%D9%88%D8%B1%DB%8C">
+                        <div class="news_cart"> 
+                            <img src="../assets/images/pic7.jpg" alt="Image 1">
+                            <div class="card-content">
+                                <p>درخواست تولیدکنندگان برای ایجاد سازمان فرش زیر نظر رئیس جمهوری</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://www.mehrnews.com/news/5935806/%D8%B3%D8%A7%D8%B2%D9%85%D8%A7%D9%86-%D9%85%D9%84%DB%8C-%D9%81%D8%B1%D8%B4-%D9%88-%D8%B5%D9%86%D8%A7%DB%8C%D8%B9-%D8%AF%D8%B3%D8%AA%DB%8C-%D8%B2%DB%8C%D8%B1-%D9%86%D8%B8%D8%B1-%D9%86%D9%87%D8%A7%D8%AF-%D8%B1%DB%8C%D8%A7%D8%B3%D8%AA-%D8%AC%D9%85%D9%87%D9%88%D8%B1%DB%8C-%D8%A7%DB%8C%D8%AC%D8%A7%D8%AF">
+                        <div class="news_cart">
+                            <img src="../assets/images/pic8.jpg" alt="Image 2">
+                            <div class="card-content">
+                                <p>«سازمان ملی فرش و صنایع دستی» زیر نظر نهاد ریاست جمهوری ایجاد شود</p>
+                            </div>
+                        </div>
+                    </a>
+    
+                    <a href="https://www.tasnimnews.com/fa/news/1402/08/20/2986749/%D8%A7%D8%B9%D8%AA%D8%B1%D8%A7%D8%B6-%D9%81%D8%B9%D8%A7%D9%84%D8%A7%D9%86-%D9%81%D8%B1%D8%B4-%D8%A8%D9%87-%D8%A7%D8%AF%D8%BA%D8%A7%D9%85-%D8%A8%D8%A7-%D8%B5%D9%86%D8%B9%D8%AA-%D8%A7%D8%B3%D8%A8%D8%A7%D8%A8-%D8%A8%D8%A7%D8%B2%DB%8C-%D8%A8%D8%A7%D9%86%DA%A9-%D9%85%D8%B1%DA%A9%D8%B2%DB%8C-%D9%85%D8%B9%D8%A7%D9%81%DB%8C%D8%AA-%D9%81%D8%B1%D8%B4-%D8%A7%D8%B2-%D8%AA%D8%B9%D9%87%D8%AF-%D8%A8%D8%A7%D8%B2%DA%AF%D8%B4%D8%AA-%D8%A7%D8%B1%D8%B2-%D8%B1%D8%A7-%D9%86%D9%BE%D8%B0%DB%8C%D8%B1%D9%81%D8%AA?ref=shahrekhabar">
+                        <div class="news_cart">
+                            <img src="../assets/images/pic9.jpg" alt="Image 3">
+                            <div class="card-content">
+                                <p>اعتراض فعالان فرش به ادغام با صنعت اسباب‌بازی/ بانک مرکزی معافیت فرش از تعهد بازگشت ارز را نپذیرفت</p>
+                            </div>
+                        </div>
+                    </a>
+    
+                    <a href="https://www.rokna.net/%D8%A8%D8%AE%D8%B4-%D8%A7%D8%AE%D8%A8%D8%A7%D8%B1-%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%DB%8C-65/945156-%D8%AA%D8%AD%D8%B1%DB%8C%D9%85-%DA%86%D9%87-%D8%A8%D8%B1-%D8%B3%D8%B1-%D9%81%D8%B1%D8%B4-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86%DB%8C-%D8%A2%D9%88%D8%B1%D8%AF%D9%87-%D8%A7%D8%B3%D8%AA-%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1-%D9%81%D8%B1%D8%B4-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86%DB%8C-%DA%A9%D9%88%DA%86%DA%A9-%D8%AA%D8%B1-%D8%B4%D8%AF">
+                        <div class="news_cart">
+                            <img src="../assets/images/pic10.jpg" alt="Image 3">
+                            <div class="card-content">
+                                <p>تحریم چه بر سر فرش ایرانی آورده است؟ / بازار فرش ایرانی کوچک‌ تر شد</p>
+                            </div>
+                        </div>
+                    </a>
+    
+                    <a href="https://www.rokna.net/%D8%A8%D8%AE%D8%B4-%D8%A7%D8%AE%D8%A8%D8%A7%D8%B1-%D8%A7%D8%AC%D8%AA%D9%85%D8%A7%D8%B9%DB%8C-95/943847-%D9%85%D9%87%D8%A7%D8%AC%D8%B1%D8%AA-%D8%AA%D9%88%D9%84%DB%8C%D8%AF-%DA%A9%D9%86%D9%86%D8%AF%DA%AF%D8%A7%D9%86-%D9%81%D8%B1%D8%B4-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86%DB%8C-%D8%A8%D9%87-%D8%A7%D9%81%D8%BA%D8%A7%D9%86%D8%B3%D8%AA%D8%A7%D9%86-%D9%BE%D8%A7%DA%A9%D8%B3%D8%AA%D8%A7%D9%86-%D8%B1%D9%81%D9%88-%D9%81%D8%B1%D8%B4-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86%DB%8C-%D8%AF%D8%B1-%D8%AA%D8%B1%DA%A9%DB%8C%D9%87-%D8%A8%D9%87%D8%B1%D9%87-%DA%AF%DB%8C%D8%B1%DB%8C-%D8%A7%D8%B2-%D8%A7%D8%B1%D8%B2-%D9%87%D9%88%DB%8C%D8%AA-%D8%AF%D8%B1-%D8%A2%D9%86-%DA%A9%D8%B4%D9%88%D8%B1">
+                        <div class="news_cart">
+                            <img src="../assets/images/pic11.jpg" alt="Image 3">
+                            <div class="card-content">
+                                <p>اعتراض فعالان فرش به ادغام با صنعت اسباب‌بازی/ بانک مرکزی معافیت فرش از تعهد بازگشت ارز را نپذیرفت</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="left-side">
+            <h3 class="title_left_side">آخرین پست ها</h3>
+            <div class="images">
+                <a href="/" class="image">
+                    <img src="../assets/images/pic1.jpg" alt="Image 1">
+                    <p>شعر های زیبا در مورد فرش</p>
+                </a>
+                <a href="/" class="image">
+                    <img src="../assets/images/pic2.jpg" alt="Image 2">
+                    <p>زیبایی های اصیل فرش ایرانی</p>
+                </a>
+                <a href="/" class="image">
+                    <img src="../assets/images/pic3.jpg" alt="Image 3">
+                    <p>گران ترین فرش های ایران</p>
+                </a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="social-icons">
+            <a href="#" class="icon facebook fa fa-linkedin-square"></a>
+            <a href="#" class="icon twitter fa fa-twitter"></a>
+            <a href="#" class="icon instagram fa fa-instagram"></a>
+        </div>
+        <div class="copyright">
+            &copy; 2023 مهدی محمدیها
+        </div>
+    </footer>
+</body>
+</html>

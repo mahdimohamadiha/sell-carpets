@@ -1,0 +1,57 @@
+@font-face {
+    font-family: B-NAZANIN;
+    src: url(../assets/fonts/B-NAZANIN.TTF);
+}
+
+*{
+    direction: rtl;
+}
+
+body {
+    font-family: B-NAZANIN;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    border-radius: 20px;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border: #333 solid 1px;
+}
+
+.head_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+h1 {
+    margin: 0;
+}
+
+.video-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    height: 300px;
+}
+
+.video {
+    margin: 10px;
+}
+
+.video video {
+    height: 300px;
+    width: 400px;
+}
+
+@media (max-width: 500px) {
+    .video video {
+        height: 200px;
+        width: 300px;
+    }
+}

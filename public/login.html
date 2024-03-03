@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/login.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../frontend/login.js"></script>
+    <title>ورود</title>
+</head>
+<body>
+    <div class="login-container">
+        <h2>ورود</h2>
+        <form class="login-form">
+            <div class="form-group">
+                <label for="username">نام کاربری:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">رمز عبور:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="button" onclick="login()" class="login-btn">ورود</button>
+            <h4 hidden id="error" style="color: red; text-align: center; margin-top: 10px;">نام کاربری و رمز عبور اشتباه است</h5>
+        </form>
+        <div class="register-link">
+            <p>اگر هنوز ثبت نام نکرده‌اید، <a href="signup.html">اینجا کلیک کنید تا ثبت نام کنید</a>.</p>
+        </div>
+    </div>
+</body>
+</html>
